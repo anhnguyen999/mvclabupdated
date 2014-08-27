@@ -65,12 +65,14 @@ namespace MvcMovie.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Title,ReleaseDate,Genre,Price,Rating")] Movie movie)
+        public ActionResult Create([Bind(Include = "ID,Title,ReleaseDate,Genre,Price,Rating,BinderId")] Movie movie)
         {
             if (ModelState.IsValid)
             {
-                db.AddMovie(movie);
-                return RedirectToAction("Index");
+                if (db.AddMovie(movie))
+                {
+                    return RedirectToAction("Index");
+                }
             }
 
             return View(movie);
@@ -96,12 +98,14 @@ namespace MvcMovie.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Title,ReleaseDate,Genre,Price,Rating")] Movie movie)
+        public ActionResult Edit([Bind(Include = "ID,Title,ReleaseDate,Genre,Price,Rating,BinderId")] Movie movie)
         {
             if (ModelState.IsValid)
             {
-                db.EditMovie(movie);
-                return RedirectToAction("Index");
+                if (db.EditMovie(movie))
+                {
+                    return RedirectToAction("Index");
+                }
             }
             return View(movie);
         }

@@ -97,17 +97,35 @@ namespace MvcMovie.BLL
 
         }
 
-        public void AddMovie(Movie movie)
+        public bool AddMovie(Movie movie)
         {
-            db.Movies.Add(movie);
-            db.SaveChanges();
+            var binderCount = (from r in db.Binders where r.BinderNumber == movie.BinderId select r).Count();
+            if (binderCount < 5)
+            {
+                db.Movies.Add(movie);
+                db.SaveChanges();
+                return true;
+            }
+            else
+            {
+                return false; 
+            }
 
         }
 
-        public void EditMovie(Movie movie)
+        public bool EditMovie(Movie movie)
         {
-            db.Entry(movie).State = EntityState.Modified;
-            db.SaveChanges();
+            var binderCount = (from r in db.Binders where r.BinderNumber == movie.BinderId select r).Count();
+            if (binderCount < 5)
+            {
+                db.Entry(movie).State = EntityState.Modified;
+                db.SaveChanges();
+                return true; 
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public void DeleteMovie(Movie movie)
