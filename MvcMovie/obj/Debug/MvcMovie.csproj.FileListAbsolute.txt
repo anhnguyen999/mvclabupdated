@@ -62,3 +62,4 @@ C:\Work\Lab\MVC\LabUpdated\MvcMovie\bin\MvcMovie.Core.dll
 C:\Work\Lab\MVC\LabUpdated\MvcMovie\bin\MvcMovie.Infrastructure.dll
 C:\Work\Lab\MVC\LabUpdated\MvcMovie\bin\MvcMovie.Core.pdb
 C:\Work\Lab\MVC\LabUpdated\MvcMovie\bin\MvcMovie.Infrastructure.pdb
+C:\Work\Lab\MVC\LabUpdated\MvcMovie\obj\Debug\MvcMovie.Migrations.Binder_PageCapacity.resources

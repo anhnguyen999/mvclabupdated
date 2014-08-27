@@ -12,5 +12,7 @@ namespace MvcMovie.Core
         public int BinderNumber { get; set; }
         public string  Label { get; set; }
 
+        public int PageCapacity  { get; set; }
+
     }
 }

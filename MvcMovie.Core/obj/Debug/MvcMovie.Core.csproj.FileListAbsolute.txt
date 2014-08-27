@@ -1,0 +1,5 @@
+C:\Work\Lab\MVC\LabUpdated\MvcMovie.Core\bin\Debug\MvcMovie.Core.dll
+C:\Work\Lab\MVC\LabUpdated\MvcMovie.Core\bin\Debug\MvcMovie.Core.pdb
+C:\Work\Lab\MVC\LabUpdated\MvcMovie.Core\obj\Debug\MvcMovie.Core.dll
+C:\Work\Lab\MVC\LabUpdated\MvcMovie.Core\obj\Debug\MvcMovie.Core.pdb
+C:\Work\Lab\MVC\LabUpdated\MvcMovie.Core\obj\Debug\MvcMovie.Core.csprojResolveAssemblyReference.cache

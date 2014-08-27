@@ -1,0 +1,12 @@
+C:\Work\Lab\MVC\LabUpdated\MvcMovie.Infrastructure\bin\Debug\MvcMovie.Infrastructure.dll.config
+C:\Work\Lab\MVC\LabUpdated\MvcMovie.Infrastructure\bin\Debug\MvcMovie.Infrastructure.dll
+C:\Work\Lab\MVC\LabUpdated\MvcMovie.Infrastructure\bin\Debug\MvcMovie.Infrastructure.pdb
+C:\Work\Lab\MVC\LabUpdated\MvcMovie.Infrastructure\bin\Debug\EntityFramework.dll
+C:\Work\Lab\MVC\LabUpdated\MvcMovie.Infrastructure\bin\Debug\EntityFramework.SqlServer.dll
+C:\Work\Lab\MVC\LabUpdated\MvcMovie.Infrastructure\bin\Debug\MvcMovie.Core.dll
+C:\Work\Lab\MVC\LabUpdated\MvcMovie.Infrastructure\bin\Debug\MvcMovie.Core.pdb
+C:\Work\Lab\MVC\LabUpdated\MvcMovie.Infrastructure\bin\Debug\EntityFramework.xml
+C:\Work\Lab\MVC\LabUpdated\MvcMovie.Infrastructure\bin\Debug\EntityFramework.SqlServer.xml
+C:\Work\Lab\MVC\LabUpdated\MvcMovie.Infrastructure\obj\Debug\MvcMovie.Infrastructure.csprojResolveAssemblyReference.cache
+C:\Work\Lab\MVC\LabUpdated\MvcMovie.Infrastructure\obj\Debug\MvcMovie.Infrastructure.dll
+C:\Work\Lab\MVC\LabUpdated\MvcMovie.Infrastructure\obj\Debug\MvcMovie.Infrastructure.pdb
