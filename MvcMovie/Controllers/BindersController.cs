@@ -8,17 +8,18 @@ using System.Web;
 using System.Web.Mvc;
 using MvcMovie.Infrastructure;
 using MvcMovie.Core;
+using MvcMovie.Core.Interface;
 
 namespace MvcMovie.Controllers
 {
     public class BindersController : Controller
     {
-        private MovieDBContext db = new MovieDBContext();
+        private IBinderRepository db = new BinderRepository();
 
         // GET: Binders
         public ActionResult Index()
         {
-            return View(db.Binders.ToList());
+            return View(db.GetAllBinders());
         }
 
         // GET: Binders/Details/5
@@ -28,7 +29,7 @@ namespace MvcMovie.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Binder binder = db.Binders.Find(id);
+            Binder binder = db.FindBinderById(id);
             if (binder == null)
             {
                 return HttpNotFound();
@@ -51,8 +52,7 @@ namespace MvcMovie.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Binders.Add(binder);
-                db.SaveChanges();
+                db.AddBinder(binder);              
                 return RedirectToAction("Index");
             }
 
@@ -66,7 +66,7 @@ namespace MvcMovie.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Binder binder = db.Binders.Find(id);
+            Binder binder = db.FindBinderById(id);
             if (binder == null)
             {
                 return HttpNotFound();
@@ -83,8 +83,8 @@ namespace MvcMovie.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(binder).State = EntityState.Modified;
-                db.SaveChanges();
+                db.EditBinder(binder);
+               
                 return RedirectToAction("Index");
             }
             return View(binder);
@@ -97,7 +97,7 @@ namespace MvcMovie.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Binder binder = db.Binders.Find(id);
+            Binder binder = db.FindBinderById(id);
             if (binder == null)
             {
                 return HttpNotFound();
@@ -110,19 +110,12 @@ namespace MvcMovie.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Binder binder = db.Binders.Find(id);
-            db.Binders.Remove(binder);
-            db.SaveChanges();
+            Binder binder = db.FindBinderById(id);
+            db.DeleteBinder(binder);
+            
             return RedirectToAction("Index");
         }
 
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+       
     }
 }
