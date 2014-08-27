@@ -6,7 +6,8 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using MvcMovie.DAL;
+using MvcMovie.Infrastructure;
+using MvcMovie.Core;
 
 namespace MvcMovie.Controllers
 {

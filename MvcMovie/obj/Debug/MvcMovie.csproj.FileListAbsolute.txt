@@ -57,8 +57,8 @@ C:\Work\Lab\MVC\LabUpdated\MvcMovie\obj\Debug\MvcMovie.csproj.GenerateResource.C
 C:\Work\Lab\MVC\LabUpdated\MvcMovie\obj\Debug\MvcMovie.dll
 C:\Work\Lab\MVC\LabUpdated\MvcMovie\obj\Debug\MvcMovie.pdb
 C:\Work\Lab\MVC\LabUpdated\MvcMovie\obj\Debug\MvcMovie.csprojResolveAssemblyReference.cache
-C:\Work\Lab\MVC\LabUpdated\MvcMovie\bin\MvcMovie.BLL.dll
-C:\Work\Lab\MVC\LabUpdated\MvcMovie\bin\MvcMovie.DAL.dll
-C:\Work\Lab\MVC\LabUpdated\MvcMovie\bin\MvcMovie.BLL.pdb
-C:\Work\Lab\MVC\LabUpdated\MvcMovie\bin\MvcMovie.DAL.pdb
 C:\Work\Lab\MVC\LabUpdated\MvcMovie\obj\Debug\MvcMovie.Migrations.Binder.resources
+C:\Work\Lab\MVC\LabUpdated\MvcMovie\bin\MvcMovie.Core.dll
+C:\Work\Lab\MVC\LabUpdated\MvcMovie\bin\MvcMovie.Infrastructure.dll
+C:\Work\Lab\MVC\LabUpdated\MvcMovie\bin\MvcMovie.Core.pdb
+C:\Work\Lab\MVC\LabUpdated\MvcMovie\bin\MvcMovie.Infrastructure.pdb

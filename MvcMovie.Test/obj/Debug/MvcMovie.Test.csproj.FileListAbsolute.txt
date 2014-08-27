@@ -47,7 +47,7 @@ C:\Work\Lab\MVC\LabUpdated\MvcMovie.Test\bin\Debug\Microsoft.AspNet.Identity.Owi
 C:\Work\Lab\MVC\LabUpdated\MvcMovie.Test\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
 C:\Work\Lab\MVC\LabUpdated\MvcMovie.Test\bin\Debug\System.Net.Http.Formatting.xml
 C:\Work\Lab\MVC\LabUpdated\MvcMovie.Test\bin\Debug\Microsoft.Owin.Security.OAuth.xml
-C:\Work\Lab\MVC\LabUpdated\MvcMovie.Test\bin\Debug\MvcMovie.BLL.dll
-C:\Work\Lab\MVC\LabUpdated\MvcMovie.Test\bin\Debug\MvcMovie.DAL.dll
-C:\Work\Lab\MVC\LabUpdated\MvcMovie.Test\bin\Debug\MvcMovie.BLL.pdb
-C:\Work\Lab\MVC\LabUpdated\MvcMovie.Test\bin\Debug\MvcMovie.DAL.pdb
+C:\Work\Lab\MVC\LabUpdated\MvcMovie.Test\bin\Debug\MvcMovie.Core.dll
+C:\Work\Lab\MVC\LabUpdated\MvcMovie.Test\bin\Debug\MvcMovie.Infrastructure.dll
+C:\Work\Lab\MVC\LabUpdated\MvcMovie.Test\bin\Debug\MvcMovie.Core.pdb
+C:\Work\Lab\MVC\LabUpdated\MvcMovie.Test\bin\Debug\MvcMovie.Infrastructure.pdb

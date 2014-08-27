@@ -1,6 +1,7 @@
 namespace MvcMovie.Migrations
 {
-    using MvcMovie.DAL;
+    using MvcMovie.Core;
+    using MvcMovie.Infrastructure;
     using MvcMovie.Models;
     using System;
     using System.Data.Entity;

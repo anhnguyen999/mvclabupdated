@@ -7,14 +7,15 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using MvcMovie.Models;
-using MvcMovie.BLL;
-using MvcMovie.DAL;
+using MvcMovie.Core;
+using MvcMovie.Infrastructure;
+
 
 namespace MvcMovie.Controllers
 {
     public class MoviesController : Controller
     {
-        private MovieService db = new MovieService();
+        private IMovieRepository db = new MovieRepository();
 
         // GET: /Movies/
         public ActionResult Index(string movieGenre, string searchString, string BinderList)

@@ -285,13 +285,13 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MvcMovie.BLL\MvcMovie.BLL.csproj">
-      <Project>{c3754287-cc5e-4285-81e1-4a154a1b88c9}</Project>
-      <Name>MvcMovie.BLL</Name>
+    <ProjectReference Include="..\MvcMovie.Core\MvcMovie.Core.csproj">
+      <Project>{b9b55f42-2dae-46f1-aa38-1937f36354b0}</Project>
+      <Name>MvcMovie.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MvcMovie.DAL\MvcMovie.DAL.csproj">
-      <Project>{b9b69615-1c64-4777-ba95-55825dff9b25}</Project>
-      <Name>MvcMovie.DAL</Name>
+    <ProjectReference Include="..\MvcMovie.Infrastructure\MvcMovie.Infrastructure.csproj">
+      <Project>{e4e6e88c-0503-4e40-8ecd-4f7c9f99937e}</Project>
+      <Name>MvcMovie.Infrastructure</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

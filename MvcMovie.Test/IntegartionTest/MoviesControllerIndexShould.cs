@@ -3,7 +3,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Web.Mvc;
 using System.Linq;
 using MvcMovie.Controllers;
-using MvcMovie.DAL;
+using MvcMovie.Core;
+using MvcMovie.Infrastructure;
 using System.Web.Http;
 using System.ComponentModel.DataAnnotations;
 using System.Collections.Generic;
@@ -52,7 +53,7 @@ namespace MvcMovie.Tests.IntegrationTest
         public void ReturnAllMoviesGivenEmptyStringParameters()
         {
             //Actual 
-            var result = _moviesController.Index(String.Empty, String.Empty) as ViewResult;
+            var result = _moviesController.Index(String.Empty, String.Empty,String.Empty) as ViewResult;
             var movies = result.Model as IQueryable<Movie>;
              
          
@@ -64,7 +65,7 @@ namespace MvcMovie.Tests.IntegrationTest
         public void ReturnExpectedMoviesGivenSearchString()
         {
             //Actual 
-            var result = _moviesController.Index(String.Empty, SEARCHMOVIESTRING) as ViewResult;
+            var result = _moviesController.Index(String.Empty, SEARCHMOVIESTRING,String.Empty) as ViewResult;
             var movies = result.Model as IQueryable<Movie> ;
             var selectedmovie = (from r in movies where r.Title.Contains(SEARCHMOVIESTRING) select r).FirstOrDefault().Title;
 
@@ -77,7 +78,7 @@ namespace MvcMovie.Tests.IntegrationTest
         public void ReturnExpetedMoviesGivenMovieGenere()
         {
             //Actual 
-            var result = _moviesController.Index(MOVIEGENERE, String.Empty) as ViewResult;
+            var result = _moviesController.Index(MOVIEGENERE, String.Empty,String.Empty) as ViewResult;
             var movies = result.Model as IQueryable<Movie>;
            
 
@@ -90,7 +91,7 @@ namespace MvcMovie.Tests.IntegrationTest
         public void ReturnExpectedMoviesGivenMoiveGenereAndTitle()
         {
             //Actual 
-            var result = _moviesController.Index(MOVIEGENERE, SEARCHMOVIETITLE) as ViewResult;
+            var result = _moviesController.Index(MOVIEGENERE, SEARCHMOVIETITLE,String.Empty) as ViewResult;
             var movies = result.Model as IQueryable<Movie>;
 
 

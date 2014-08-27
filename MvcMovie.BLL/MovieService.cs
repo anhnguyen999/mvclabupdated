@@ -9,7 +9,7 @@ using System.Data.Entity;
 
 namespace MvcMovie.BLL
 {
-    public class MovieService
+    public class MovieService : MvcMovie.BLL.IMovieService
     {
 
         private MovieDBContext db = new MovieDBContext();

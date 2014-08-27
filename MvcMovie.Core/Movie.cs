@@ -1,8 +1,8 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-using System.Data.Entity;
 
-namespace MvcMovie.DAL
+
+namespace MvcMovie.Core
 {
 public class Movie
 {
@@ -32,10 +32,4 @@ public class Movie
     public int? BinderId { get; set; }
 }
 
-    public class MovieDBContext : DbContext
-    {
-        public DbSet<Movie> Movies { get; set; }
-
-        public DbSet<Binder> Binders { get; set; }
-    }
 }
