@@ -14,7 +14,12 @@ namespace MvcMovie.Controllers
 {
     public class BindersController : Controller
     {
-        private IBinderRepository db = new BinderRepository();
+        private IBinderRepository db;
+
+         public BindersController (IBinderRepository db )
+	        {
+                    this.db = db; 
+	        }
 
         // GET: Binders
         public ActionResult Index()

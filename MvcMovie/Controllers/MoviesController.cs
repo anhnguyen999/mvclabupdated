@@ -15,7 +15,13 @@ namespace MvcMovie.Controllers
 {
     public class MoviesController : Controller
     {
-        private IMovieRepository db = new MovieRepository();
+        private readonly IMovieRepository db;
+
+        public MoviesController(IMovieRepository db)
+        {
+            this.db = db;
+
+        }
 
         // GET: /Movies/
         public ActionResult Index(string movieGenre, string searchString, string BinderList)
