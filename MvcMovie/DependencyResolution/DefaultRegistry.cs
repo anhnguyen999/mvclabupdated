@@ -26,6 +26,7 @@ namespace MvcMovie.DependencyResolution {
             Scan(
                 scan => {
                     scan.TheCallingAssembly();
+                    scan.AssemblyContainingType<MvcMovie.Infrastructure.MovieRepository>();
                     scan.WithDefaultConventions();
 					scan.With(new ControllerConvention());
                 });

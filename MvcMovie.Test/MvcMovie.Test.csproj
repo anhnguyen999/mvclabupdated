@@ -92,6 +92,10 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="IntegartionTest\MoviesControllerCreateShould.cs" />
+    <Compile Include="IntegartionTest\MoviesControllerDeleteShould.cs" />
+    <Compile Include="IntegartionTest\MoviesControllerDetailsShould.cs" />
+    <Compile Include="IntegartionTest\MoviesControllerEditShould.cs" />
     <Compile Include="IntegartionTest\MoviesControllerIndexShould.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -112,6 +116,9 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UnitTest\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
