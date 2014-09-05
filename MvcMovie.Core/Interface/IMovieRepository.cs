@@ -6,15 +6,15 @@ namespace MvcMovie.Core
 {
     public interface IMovieRepository
     {
-        bool AddMovie(Movie movie);
-        void DeleteMovie(Movie movie);
-        bool EditMovie(Movie movie);
-        Movie FindMovieById(int? Id);
-        IQueryable<Movie> GetAllMovies();
+        bool Add(Movie movie);
+        void Delete(Movie movie);
+        bool Edit(Movie movie);
+        Movie FindById(int? Id);
+        IQueryable<Movie> GetAll();
         List<int> GetBinderList();
         List<string> GetGenereList();
         IQueryable<Movie> GetMoviesByBinder(int binderId);
-        IQueryable<Movie> GetMoviesByGenere(string movieGenre);
+        IQueryable<Movie> GetMoviesByGenre(string movieGenre);
         IQueryable<Movie> GetMoviesBySearchString(string searchString);
         Movie ReturnDefaultMovie();
     }

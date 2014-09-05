@@ -96,13 +96,13 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTest\MoviesControllerIndexShould.cs" />
-    <Compile Include="UnitTest\FakeMovieRepository.cs" />
-    <Compile Include="IntegartionTest\MoviesControllerCreateShould.cs" />
-    <Compile Include="IntegartionTest\MoviesControllerDeleteShould.cs" />
-    <Compile Include="IntegartionTest\MoviesControllerDetailsShould.cs" />
-    <Compile Include="IntegartionTest\MoviesControllerEditShould.cs" />
-    <Compile Include="IntegartionTest\MoviesControllerIndexShould.cs" />
+    <Compile Include="Unit Tests\MoviesControllerIndexShould.cs" />
+    <Compile Include="Unit Tests\FakeMovieRepository.cs" />
+    <Compile Include="Integration Tests\MoviesControllerCreateShould.cs" />
+    <Compile Include="Integration Tests\MoviesControllerDeleteShould.cs" />
+    <Compile Include="Integration Tests\MoviesControllerDetailsShould.cs" />
+    <Compile Include="Integration Tests\MoviesControllerEditShould.cs" />
+    <Compile Include="Integration Tests\MoviesControllerIndexShould.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

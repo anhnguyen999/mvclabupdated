@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace MvcMovie.Core
 {
-  public class Binder
+    public class Binder
     {
         public int ID { get; set; }
         public int BinderNumber { get; set; }
-        public string  Label { get; set; }
-
-        public int PageCapacity  { get; set; }
+        public string Label { get; set; }
+        public int PageCapacity { get; set; }
 
     }
 }

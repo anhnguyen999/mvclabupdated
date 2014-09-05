@@ -24,7 +24,7 @@ namespace MvcMovie.Controllers
         // GET: Binders
         public ActionResult Index()
         {
-            return View(db.GetAllBinders());
+            return View(db.GetAll());
         }
 
         // GET: Binders/Details/5
@@ -34,7 +34,7 @@ namespace MvcMovie.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Binder binder = db.FindBinderById(id);
+            Binder binder = db.FindById(id);
             if (binder == null)
             {
                 return HttpNotFound();
@@ -57,7 +57,7 @@ namespace MvcMovie.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.AddBinder(binder);              
+                db.Add(binder);              
                 return RedirectToAction("Index");
             }
 
@@ -71,7 +71,7 @@ namespace MvcMovie.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Binder binder = db.FindBinderById(id);
+            Binder binder = db.FindById(id);
             if (binder == null)
             {
                 return HttpNotFound();
@@ -88,7 +88,7 @@ namespace MvcMovie.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.EditBinder(binder);
+                db.Edit(binder);
                
                 return RedirectToAction("Index");
             }
@@ -102,7 +102,7 @@ namespace MvcMovie.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Binder binder = db.FindBinderById(id);
+            Binder binder = db.FindById(id);
             if (binder == null)
             {
                 return HttpNotFound();
@@ -115,8 +115,8 @@ namespace MvcMovie.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Binder binder = db.FindBinderById(id);
-            db.DeleteBinder(binder);
+            Binder binder = db.FindById(id);
+            db.Delete(binder);
             
             return RedirectToAction("Index");
         }

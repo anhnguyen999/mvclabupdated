@@ -11,7 +11,7 @@ namespace MvcMovie.Infrastructure
     public class MovieRepository : IMovieRepository
     {
         private MovieDBContext db = new MovieDBContext();
-        public bool AddMovie(Movie movie)
+        public bool Add(Movie movie)
         {
             var binderCount = (from r in db.Binders where r.BinderNumber == movie.BinderId select r).Count();
             if (binderCount < 5)
@@ -26,13 +26,13 @@ namespace MvcMovie.Infrastructure
             }
         }
 
-        public void DeleteMovie(Movie movie)
+        public void Delete(Movie movie)
         {
             db.Movies.Remove(movie);
             db.SaveChanges();
         }
 
-        public bool EditMovie(Movie movie)
+        public bool Edit(Movie movie)
         {
             var binderCount = (from r in db.Binders where r.BinderNumber == movie.BinderId select r).Count();
             if (binderCount < 5)
@@ -47,7 +47,7 @@ namespace MvcMovie.Infrastructure
             }
         }
 
-        public Movie FindMovieById(int? Id)
+        public Movie FindById(int? Id)
         {
             var movie = (from m in db.Movies
                          where m.ID == Id
@@ -55,7 +55,7 @@ namespace MvcMovie.Infrastructure
             return movie;
         }
 
-        public IQueryable<Movie> GetAllMovies()
+        public IQueryable<Movie> GetAll()
         {
             var movies = from m in db.Movies
                          select m;
@@ -89,7 +89,7 @@ namespace MvcMovie.Infrastructure
             return movies;
         }
 
-        public IQueryable<Movie> GetMoviesByGenere(string movieGenre)
+        public IQueryable<Movie> GetMoviesByGenre(string movieGenre)
         {
             var movies = from m in db.Movies
                          where m.Genre == movieGenre

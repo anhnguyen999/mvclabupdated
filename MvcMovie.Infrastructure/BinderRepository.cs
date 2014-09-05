@@ -12,7 +12,7 @@ namespace MvcMovie.Infrastructure
    public class BinderRepository : IBinderRepository
     {
        private MovieDBContext context = new MovieDBContext();
-        public IQueryable<Binder> GetAllBinders()
+        public IQueryable<Binder> GetAll()
         {
             var result = from r in context.Binders select r;
             return result;
@@ -21,7 +21,7 @@ namespace MvcMovie.Infrastructure
 
 
 
-        public Binder FindBinderById(int? Id)
+        public Binder FindById(int? Id)
         {
             var binder = (from m in context.Binders
                          where m.BinderNumber == Id
@@ -31,7 +31,7 @@ namespace MvcMovie.Infrastructure
         }
 
 
-        public void  AddBinder(Binder binder)
+        public void  Add(Binder binder)
         {
 
             context.Binders.Add(binder);
@@ -40,13 +40,13 @@ namespace MvcMovie.Infrastructure
         }
 
 
-        public void DeleteBinder(Binder binder)
+        public void Delete(Binder binder)
         {
             context.Binders.Remove(binder);
             context.SaveChanges();
         }
 
-        public void EditBinder(Binder binder)
+        public void Edit(Binder binder)
         {
            
                 context.Entry(binder).State = EntityState.Modified;

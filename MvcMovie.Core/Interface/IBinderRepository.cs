@@ -6,15 +6,14 @@ using System.Threading.Tasks;
 
 namespace MvcMovie.Core.Interface
 {
-   public interface IBinderRepository
+    public interface IBinderRepository
     {
 
-       IQueryable<Binder> GetAllBinders();
-       Binder FindBinderById(int? Id);
-
-       void  AddBinder(Binder binder);
-       void DeleteBinder(Binder binder);
-       void EditBinder(Binder binder);
+        IQueryable<Binder> GetAll();
+        Binder FindById(int? Id);
+        void Add(Binder binder);
+        void Delete(Binder binder);
+        void Edit(Binder binder);
 
     }
 }
