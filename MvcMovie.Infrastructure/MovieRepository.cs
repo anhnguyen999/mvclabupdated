@@ -5,7 +5,6 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace MvcMovie.Infrastructure
 {
     public class MovieRepository : IMovieRepository
@@ -25,7 +24,6 @@ namespace MvcMovie.Infrastructure
                 return false;
             }
         }
-
         public void Delete(Movie movie)
         {
             db.Movies.Remove(movie);
@@ -59,7 +57,7 @@ namespace MvcMovie.Infrastructure
         {
             var movies = from m in db.Movies
                          select m;
-            return movies; 
+            return movies;
         }
 
         public List<int> GetBinderList()

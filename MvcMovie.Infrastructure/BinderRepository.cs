@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace MvcMovie.Infrastructure
 {
-   public class BinderRepository : IBinderRepository
+    public class BinderRepository : IBinderRepository
     {
-       private MovieDBContext context = new MovieDBContext();
+        private MovieDBContext context = new MovieDBContext();
         public IQueryable<Binder> GetAll()
         {
             var result = from r in context.Binders select r;
@@ -19,26 +19,22 @@ namespace MvcMovie.Infrastructure
 
         }
 
-
-
         public Binder FindById(int? Id)
         {
             var binder = (from m in context.Binders
-                         where m.BinderNumber == Id
-                         select m).FirstOrDefault();
+                          where m.BinderNumber == Id
+                          select m).FirstOrDefault();
             return binder;
-            
+
         }
 
-
-        public void  Add(Binder binder)
+        public void Add(Binder binder)
         {
 
             context.Binders.Add(binder);
             context.SaveChanges();
-               
-        }
 
+        }
 
         public void Delete(Binder binder)
         {
@@ -48,10 +44,10 @@ namespace MvcMovie.Infrastructure
 
         public void Edit(Binder binder)
         {
-           
-                context.Entry(binder).State = EntityState.Modified;
-                context.SaveChanges();
-              
+
+            context.Entry(binder).State = EntityState.Modified;
+            context.SaveChanges();
+
         }
     }
 }

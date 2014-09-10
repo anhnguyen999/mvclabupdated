@@ -5,7 +5,6 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace MvcMovie.Infrastructure
 {
     public class MovieDBContext : DbContext
@@ -13,7 +12,5 @@ namespace MvcMovie.Infrastructure
         public DbSet<Movie> Movies { get; set; }
 
         public DbSet<Binder> Binders { get; set; }
-
-   
     }
 }

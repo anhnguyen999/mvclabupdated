@@ -1,7 +1,5 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-
-
 namespace MvcMovie.Core
 {
     public class Movie

@@ -8,7 +8,6 @@ namespace MvcMovie.Core.Interface
 {
     public interface IBinderRepository
     {
-
         IQueryable<Binder> GetAll();
         Binder FindById(int? Id);
         void Add(Binder binder);
